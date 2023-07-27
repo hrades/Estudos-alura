@@ -4,6 +4,7 @@ let imagemAtor1;
 let imagemCarro1;
 let imagemCarro2;
 let imagemCarro3;
+let heart;
 //Sons carregados
 let theme;
 let ponto;
@@ -15,6 +16,7 @@ function preload(){
   imagemCarro1 = loadImage("images/carro-1.png");
   imagemCarro2 = loadImage("images/carro-2.png");
   imagemCarro3 = loadImage("images/carro-3.png");
+  heart = loadImage("images/heart.png");
   theme = loadSound("sounds/theme_song.wav");
   ponto = loadSound("sounds/point.wav");
   bater = loadSound("sounds/crash.wav");
