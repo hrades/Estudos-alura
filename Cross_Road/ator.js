@@ -5,6 +5,7 @@ let tamAtor = 30;
 let velocAtor = 4;
 let colidiu = false;
 let pontos = 0;
+let vidas = 5;
 
 function showAtor(){
   image(imagemAtor1, xAtor, yAtor, tamAtor, tamAtor);
@@ -32,6 +33,7 @@ function colidir(){
 
 function crash(){
   yAtor = 385;
+  vidas -= 1;
   if(pontos>0){
     pontos -= 1;
   }
@@ -53,4 +55,23 @@ function pontuar(){
 
 function evitaBorda(){
   return yAtor < 385;
+}
+
+function showVida(){
+  image(heart, 450, 8, 20, 20);
+  textSize(25);
+  fill('white');
+  text(vidas, 485, 27);
+}
+
+function gameOver(){
+  if(vidas==0){
+    textSize(95);
+    fill('black');
+    text("GAME OVER", 10, height/2);
+    velocAtor = 0;
+    for(let i=0; i<imagemCarros.length; i++){
+      velCarros[i] = 0;
+    }
+  }
 }
