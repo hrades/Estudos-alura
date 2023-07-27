@@ -7,11 +7,12 @@ function draw() {
   background(imagemEstrada);
   showAtor();
   showCarro();
+  showVida();
   moveAtor();
   moveCar();
   initCar();
   colidir();
   final();
   pontuar();
+  gameOver();
 }  
-
